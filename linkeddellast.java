@@ -39,7 +39,7 @@ public class linkeddellast {
             System.out.println("list is empty");
         }
         else if(head.next==null){
-            head = null;
+            tail = head = null;
         }
         else{
             Node prev = head;
@@ -48,7 +48,8 @@ public class linkeddellast {
                 temp = prev;
                 prev = prev.next;
             }
-            temp.next = prev.next;
+            temp.next = null;
+            tail = temp;
         }
     }
     public static void main(String args[]){
